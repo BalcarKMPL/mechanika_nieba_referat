@@ -1,0 +1,81 @@
+\begin{frame}{Transformacje Kanonicznowa}
+   Podstawowe pytanie: "Skąd brać transformacje kanoniczne?"
+
+   Jest jeden sposób\dots
+\end{frame}
+
+\begin{frame}
+    Trajektorie fizyczne to ekstremale funkcjonału:
+
+    \[ (q, p) \mapsto \int_{t_0}^{t_k} p\cdot \dot{q} - H \text{d}t \]
+
+    te trajektorie, po transformacji kanonicznej, muszą być ekstremalami funkcjonału:
+
+    \[ (Q, P) \mapsto \int_{t_0}^{t_k} P\cdot \dot{Q} - K \text{d}t \]
+\end{frame}
+
+\begin{frame}
+    Oba funkcjonały są równoważne w szczególności jeżeli ich formy różnią się o pochodną jakiejś funkcji $F$ po czasie:
+
+    \[ (p\cdot \dot{q} - H) \text{d}t = (P\cdot \dot{Q} - K)\text{d}t + \text{d}F \]
+
+    Ktoś mógłby zapytać, "funkcją czego dokładnie jest $F$?". Poprawnych odpowiedzi jest wiele, najczęstsze przypadki to funkcje od $(q, Q, t)$, $(q, P, t)$, $(p, Q, t)$ oraz $(p, P, t)$.
+
+\end{frame}
+
+\begin{frame}
+    Dla przykładu, niech $F=F(p, Q, t)$. Wówczas (dodając cichaczem dodatkowy term, który nic nie psuje \emph{pinky promise}) dostaniemy:
+
+    \[ \text{d}F = p \cdot \text{d}q - P \cdot \text{d} Q + (K-H)\text{d}t \]
+
+    Stąd dostajemy następujące zależności:
+
+    \begin{itemize}
+        \item $p = \frac{\partial F}{\partial q}$,
+        \item $P = -\frac{\partial F}{\partial Q}$,
+        \item $K = H + \frac{\partial F}{\partial t}$.
+    \end{itemize}
+
+\end{frame}
+
+\begin{frame}
+    Przykład:
+
+    Rozważmy tradycyjnie układ oscylatora harmonicznego:
+
+    \[ H = \frac{1}{2}p^2 + \frac{1}{2} q^2 \]
+
+    i funkcję tworzącą:
+
+    \[ F(p,Q) = \frac{1}{2} p^2 \cot Q \]
+
+    wówczas dostajemy zależności:
+
+    \[q=-p \cot Q \quad\quad\quad P=\frac{1}{2} p^2 \frac{1}{\sin^2 Q}\]
+
+    które możemy uprościć do...
+
+\end{frame}
+
+\begin{frame}
+    \[ \frac{1}{2}p^2 = P \sin^2 Q \quad\quad \frac{1}{2}q^2 = \frac{1}{2} p^2 \frac{\cos^2 Q}{\sin^2 Q}=P \cos^2 Q \]
+
+    I wsadzając te termy do Hamiltonianu otrzymujemy:
+
+    \[ K(Q, P, t) = P \]
+
+    I dostajemy nasze klasyczne zmienne kąt-działanie.
+\end{frame}
+
+\begin{frame}
+    Transformacje kanoniczne pochodzące z funkcji tworzących mogą posłużyć nam do drastycznego uproszczenia dynamiki. W szczególności można znaleźć taką transformację, że:
+
+    \[ K(Q, P, t) = 0 \]
+
+    co natychmiast sprawia, że wszystkie trajektorie są stacjonarne. Mowa tutaj o tzw. równaniu Hamiltona-Jacobiego.
+\end{frame}
+
+\begin{frame}
+    Równanie Hamiltona-Jacobiego, wraz z 
+\end{frame}
+

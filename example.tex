@@ -1,0 +1,126 @@
+\section{Mean field}
+
+\begin{frame}
+    After some simplifications (such as $\theta=1$ and $\mu=0$) and long and not quite formal calculations we arrive at critical parameters:
+
+    \begin{align*}
+        W_c &= \frac{1}{\Gamma} &\, g_c &= \frac{p}{q}-\frac{1}{\Gamma J q} \\
+        h_c &= 0 &\, Y_c &= 1
+    \end{align*}
+
+    \uncover<2->{Of course, for different $\theta$ and $\mu$ the critical values will be different, but soon we will see, why that does not matter.}
+\end{frame}
+
+\begin{frame}
+    The system can operate in several different modes. Firstly, we will fix $h>h_c=0$ ($Y>Y_c=1$) go through different distinct behaviours by increasing $g$ (the inhibition of the network). Starting from $g=0$ ($W=pJ$) we have:
+\end{frame}
+
+\begin{frame}
+    \centering
+    SR – Synchronous Regular
+
+    \begin{flushleft}
+        The network is divided in a few clusters, in each neurons are almost fully synchronised and behave like oscillators. The distribution of time intervals between consequtive activities is sharply peaked. Despite the local oscillatory behaviour, global behaviour seems stationary.
+    \end{flushleft}
+    \centering
+    \begin{figure}
+        \centering
+        \includegraphics[width=0.95\textwidth]{img/plot_2c_SR.png}
+    \end{figure}
+\end{frame}
+
+% \begin{frame}
+%     \begin{figure}
+%         \centering
+%         \includegraphics[width=0.95\textwidth]{img/plot_2c_SR.png}
+%     \end{figure}
+% \end{frame}
+
+\begin{frame}
+    \centering
+    AR – Asynchronous Regular
+
+    \begin{flushleft}
+        The network still has regular (near stationary) global behaviour, but mean activity of a network is smaller. Also, each individual neuron admits only quasi-regular behaviour, with broader distribution of times between firings. 
+    \end{flushleft}
+    \begin{figure}
+        \centering
+        \includegraphics[width=0.95\textwidth]{img/plot_2c_AR.png}
+    \end{figure}
+\end{frame}
+
+% \begin{frame}
+%     \begin{figure}
+%         \centering
+%         \includegraphics[width=0.95\textwidth]{img/plot_2c_AR.png}
+%     \end{figure}
+% \end{frame}
+
+\begin{frame}
+    \centering
+    AI – Asynchronous Irregular
+
+    \begin{flushleft}
+        The network still exhibits near stationary behaviour, but mean activity is close to $0$, and distribution of times of firing is strongly irregular.
+    \end{flushleft}
+    \begin{figure}
+        \centering
+        \includegraphics[width=0.95\textwidth]{img/plot_2c_AI.png}
+    \end{figure}
+\end{frame}
+
+% \begin{frame}
+%     \begin{figure}
+%         \centering
+%         \includegraphics[width=0.95\textwidth]{img/plot_2c_AI.png}
+%     \end{figure}
+% \end{frame}
+
+\begin{frame}
+    \centering
+    SI – Synchronous Irregular
+
+    \begin{flushleft}
+        Individual behaviour of each neuron is still irregular, but network's global behaviour becames oscillatory.
+    \end{flushleft}
+    \centering
+    \begin{figure}
+        \centering
+        \includegraphics[width=0.95\textwidth]{img/plot_2c_SI.png}
+    \end{figure}
+\end{frame}
+
+% \begin{frame}
+%     \begin{figure}
+%         \centering
+%         \includegraphics[width=0.95\textwidth]{img/plot_2c_SI.png}
+%     \end{figure}
+% \end{frame}
+
+\begin{frame}
+    Now, let's fix $h<h_c=0$ ($Y<Y_c=1$) and again look at behaviour of the system starting from $g=0$ and slowly increasing it. The behaviour is much poorer and consist of
+
+    \newline
+    \centering
+    H, I and Q states
+
+    \begin{flushleft}
+        These states are a fully stationary solutions, st. the activity of each neuron in each time step is the same.
+    \end{flushleft}
+\end{frame}
+
+\begin{frame}
+    \begin{figure}
+        \centering
+        \includegraphics[width=0.95\textwidth]{img/plot_1b.png}
+    \end{figure}
+\end{frame}
+
+\begin{frame}
+    \begin{figure}
+        \centering
+        \includegraphics[width=0.95\textwidth]{img/plot_2a.png}
+    \end{figure}
+\end{frame}
+
+

@@ -5,6 +5,8 @@
 \end{frame}
 
 \begin{frame}
+    W całości prezentacji $q$, $p$, $Q$ oraz $P$ to (co)wektory z $\mathbb{R}^n$ i $\mathbb{R}^{n\ast}$. 
+
     Trajektorie fizyczne to ekstremale funkcjonału:
 
     \[ (q, p) \mapsto \int_{t_0}^{t_k} p\cdot \dot{q} - H \text{d}t \]
@@ -112,5 +114,81 @@
     \[ p = \sqrt{2 P - q^2} = \sqrt{2 P} \cos\left(Q + t\right) \]
 
     W ten sposób rozwiązaliśmy zagadnienie oscylatora harmonicznego jedną z najbardziej skomplikowanych metod, 
+\end{frame}
+
+\begin{frame}
+    Weźmy trudniejszy przykład, cząstkę w $\mathbb{R}^3$ w potencjale centralnym:
+
+    \[ H = \frac{1}{2m}\left(p_r^2 + \frac{1}{r^2}p_\theta^2 + \frac{1}{r^2 \sin^2\theta}p_\theta^2\right)+U(r) \]
+
+    Zakładając rozdzielone zmienne:
+
+    \[ F = R(r, P) + \Theta(\theta, P + \Phi(\phi, P) + T(t, P) \]
+
+    Zatem równanie Hamiltona Jacobiego daje nam:
+
+    \[ T' + \frac{1}{2m}\left(R'^2 + \frac{1}{r^2}\Theta'^2 + \frac{1}{r^2 \sin^2\theta} \Phi'^2 \right) + V(r) = 0 \]
+\end{frame}
+
+\begin{frame}
+    \[ \frac{1}{2m}\left(R'^2 + \frac{1}{r^2}\Theta'^2 + \frac{1}{r^2 \sin^2\theta} \Phi'^2 \right) + V(r) = -T' \]
+
+    Jak widać, term po prawej zależy wyłącznie od $t$, zaś term po lewej od $t$ nie zależy, zatem obie strony równania są stałe, co daje $T(t,P) = -t E$ (gdzie $E$ to jeden z nowych "pędów") oraz:
+
+    \[ \frac{1}{2m}\left(R'^2 + \frac{1}{r^2}\Theta'^2 + \frac{1}{r^2 \sin^2\theta} \Phi'^2 \right) + V(r) = E \]
+\end{frame}
+
+\begin{frame}
+    Upraszczając poprzednie równanie:
+
+     \[ r^2 \sin^2\theta \cdot R'^2 + \sin^2\theta \cdot \Theta'^2 + r^2 \sin^2\theta \cdot 2m(V(r) - E) = -\Phi'^2 \]
+
+     Znów, część po prawej zależy wyłącznie od $\phi$, a część po lewej nie, zatem dostajemy $\Phi = L_z \phi$ (gdzie $L_z$ to kolejny z nowych "pędów") oraz:
+
+    \[ r^2  \cdot R'^2 + r^2  \cdot 2m(V(r) - E) = -\Theta'^2 - \frac{L_z^2}{\sin^2\theta}\]
+
+    Rozwiązując analogicznie jak wcześniej dostajemy:
+
+    \[ R = \sqrt{2m}\int\sqrt{E-U(r)-\frac{L^2}{2mr^2}}\,\text{d}r  \quad\quad \Theta = \int \sqrt{L^2 - \frac{L_z^2}{\sin^2\theta}}\,\text{d}\theta \]
+     
+\end{frame}
+
+\begin{frame}
+    Oczywiście, największą trudnością jest rozwiązanie równania:
+
+    \[ H(q, \frac{\partial F}{\partial q}, t) + \frac{\partial F}{\partial t} = 0 \]
+
+    Należy się zastanowić, czy taka funkcja istnieje zawsze (tj. dla każdego Hamiltonianu).
+
+\end{frame}
+
+\begin{frame}
+    Wiadomo z analizy matematycznej, że:
+
+    \[ \dot{F}=\frac{\partial F}{\partial q} \dot{q} + \frac{\partial F}{\partial P} \dot{P} + \frac{\partial F}{\partial t} \]
+
+    a z poprzednich slajdów, że:
+
+    \[ \frac{\partial F}{\partial q} = p \quad\quad \frac{\partial F}{\partial P} = 0 \quad\quad \frac{\partial F}{\partial t} = -H \]
+
+    zatem mamy, że:
+
+    \[ \dot{F} = p \cdot \dot{q} - H = \mathcal{L} \]
+
+    całkując po czasie dostajemy 
+
+    \[ F = \int_{t_0}^{t_k} \mathcal{L}\text{d} t = S \]
+
+    Czyli ta funkcja tworząca to po prostu działanie.
+\end{frame}
+
+\begin{frame}
+    Referencje:
+
+    \begin{itemize}
+        \item \url{https://astro.pas.rochester.edu/~aquillen/phy411/lecture2.pdf} - można tam znaleźć przyjemne interpretacje geometryczne
+        
+        \item \url{https://phys.libretexts.org/Bookshelves/Classical_Mechanics/Variational_Principles_in_Classical_Mechanics_(Cline)/15\%3A_Advanced_Hamiltonian_Mechanics} - zawiera m.in. przykłady HJE dla większych układów niż oscylator harmoniczny
+    \end{itemize}
 \end{frame}
 

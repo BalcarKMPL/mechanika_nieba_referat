@@ -78,23 +78,34 @@
 \end{frame}
 
 \begin{frame}
-    W wielkim skrócie, szukamy funkcji $F(q, P, t)$ takiej, że Kamiltonian będzie się wyrażał zależnością $K=H+\frac{\partial F}{\partial t}$. Jak łatwo policzyć, nowe i stare pędy wyrażają się pochodnymi $F$:
+    W wielkim skrócie, szukamy funkcji $F(q, P, t)$ takiej, że Kamiltonian będzie się wyrażał zależnością $K=H+\frac{\partial F}{\partial t}$. Jak łatwo policzyć:
 
-    \[ p=\frac{\partial F}{\partial q} \quad\quad Q=\frac{\partial F}{\partial P} \]
+    \[ p=\frac{\partial F}{\partial q} \quad\quad Q=\frac{\partial F}{\partial P} \quad\quad 0=H+\frac{\partial F}{\partial t} \]
 
-    Pierwsze $n$ równań, wraz z równaniem H-J $0=H+\frac{\partial F}{\partial t}$, zadaje układ $n+1$ równań różniczkowych cząstkowych, gdzie $Q$ są parametrami, a nie prawdziwymi zmiennymi funkcji $F$. Dla przykładu wykorzystamy oscylator harmoniczny.
+    Zatem dostajemy nieliniowe równanie różniczkowe cząstkowe:
+
+    \[ H\left(q, \frac{\partial F}{\partial q}, t\right) + \frac{\partial F}{\partial t} = 0\]
 \end{frame}
 
 \begin{frame}
-    Zaczynamy od $H=\frac{1}{2}(p^2+q^2)$. Zakładamy, że funkcję $F$ można zapisać jako sumę rozdzielonych zmiennych:
+    Dla oscylatora harmonicznego z $H= \frac{1}{2}p^2+\frac{1}{2}q^2$ mamy:
+
+    \[ \frac{1}{2}q^2 + \frac{1}{2}\left(\frac{\partial F}{\partial q}\right)^2 + \frac{\partial F}{\partial t} = 0\]
+
+    Zakładamy, że funkcję $F$ można zapisać jako sumę funkcji o rozdzielonych zmiennych:
 
     \[ F(q,P,t) = F_t(t,P) + F_q(q,P) \]
 
-    Używając równania $\partial_t F_t = -H$ i zauważając, że $H$ jest stałe, zatem równe jedynemu z parametrów, jaki memy do dyspozycji, dostajemy:
+    Ponieważ wiemy, że $P$ są stałe, to możemy ich używać jako jakichś parametrów w trakcie rozwiązywania tego równania (więcej szczegółów później).
+    
+\end{frame}
+
+\begin{frame}
+    Używając równania $\partial_t F_t = -H$ i zauważając, że $H$ jest stałe, zatem równe jedynemu z parametrów, jaki mamy do dyspozycji, dostajemy:
 
     \[ F_t = -P t \]
 
-    Analogicznie rozwiązując dla $F_q$ dostajemy:
+    Analogicznie rozwiązując dla $\partial_q F_q = p$ dostajemy:
 
     \[ F_q = \int_0^q \sqrt{2 P - \overline{q}^2} \text{d} \overline{q} \]
 
@@ -123,7 +134,7 @@
 
     Zakładając rozdzielone zmienne:
 
-    \[ F = R(r, P) + \Theta(\theta, P + \Phi(\phi, P) + T(t, P) \]
+    \[ F = R(r, P) + \Theta(\theta, P) + \Phi(\phi, P) + T(t, P) \]
 
     Zatem równanie Hamiltona Jacobiego daje nam:
 
@@ -156,7 +167,7 @@
 \begin{frame}
     Oczywiście, największą trudnością jest rozwiązanie równania:
 
-    \[ H(q, \frac{\partial F}{\partial q}, t) + \frac{\partial F}{\partial t} = 0 \]
+    \[ H\left(q, \frac{\partial F}{\partial q}, t\right) + \frac{\partial F}{\partial t} = 0 \]
 
     Należy się zastanowić, czy taka funkcja istnieje zawsze (tj. dla każdego Hamiltonianu).
 
